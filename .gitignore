@@ -1,0 +1,4 @@
+node_modules/
+npm-debag.log
+.DS_Store
+/*.env
