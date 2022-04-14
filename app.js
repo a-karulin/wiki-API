@@ -55,6 +55,16 @@ app.route("/articles/:article")
     });
 })
 
+.delete(function(req, res){
+  Article.deleteOne({title: req.params.article}, function(err){
+    if (!err){
+      res.send("Successfully deleted article");
+    }else{
+      res.send(err);
+    }
+  });
+})
+
 app.route("/articles")
 
 .get(
